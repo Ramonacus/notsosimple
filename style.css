@@ -1,0 +1,188 @@
+/*
+Theme Name: Not so simple
+Theme URI: http://ramonyvane.com
+Author: Ramon Ferrer Vicens
+Author URI: http://ramonyvane.com
+Description: Very basic theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: simple
+Text Domain: notsosimple
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+/* Reset
+-----------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Typography
+-----------------------------------------------------------------------------*/
+/*
+See https://drewish.com/tools/vertical-rhythm/
+Base 16px
+Line height 20px
+Targets 28, 24, 20, 16
+*/
+body {
+  font: 16px/1 Helvetica, Arial, sans-serif;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.25;
+	margin: 0 0 1.25em 0;
+}
+
+h1,
+.class-for-28px {
+	font-size: 1.75em;
+	line-height: 1.4286;
+	margin-top: 0.7143em;
+	margin-bottom: 0;
+}
+
+h2,
+.class-for-24px {
+	font-size: 1.5em;
+	line-height: 1.6667;
+	margin-top: 0.8333em;
+	margin-bottom: 0;
+}
+
+.class-for-20px {
+	font-size: 1.25em;
+	line-height: 1;
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+.class-for-16px {
+	font-size: 1em;
+	line-height: 1.25;
+	margin-top: 1.25;
+	margin-bottom: 0;
+}
+
+/* Layout (mobile first)
+-----------------------------------------------------------------------------*/
+.main-header,
+.main-container,
+.main-footer {
+	margin: 1em;
+	border-top: 1px dashed;
+}
+
+/* Navigation
+-----------------------------------------------------------------------------*/
+.main-header .menu {
+	font-size: 1em;
+	line-height: 2.5;
+}
+.main-header .sub-menu > .menu-item {
+	margin-left: 1em;
+}
+
+/* Layout (media queries)
+-----------------------------------------------------------------------------*/
+@media (min-width: 375px) {
+	/* iPhone 6 and on */
+
+}
+@media (min-width: 480px) {
+	/* smartphones, Android phones, landscape iPhone */
+}
+
+@media (min-width: 600px) {
+	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+@media (min-width: 801px) {
+	/* tablet, landscape iPad, lo-res laptops ands desktops */
+	.main-header a {
+		display: block;
+	}
+	.main-header .menu {
+		display: flex;
+	}
+	.main-header .menu > .menu-item {
+		flex-grow: 1;
+		position: relative;
+	}
+
+	.main-header .menu-item {
+		position: relative;
+	}
+
+	.main-header .sub-menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		box-sizing: border-box;
+		min-width: 100%;
+		border: 1px dashed;
+		background: white;
+	}
+
+	.main-header .menu-item:hover > .sub-menu {
+		display: block;
+	}
+
+	.main-container {
+		display: flex;
+	}
+	.main-container > main {
+		flex-grow: 4;
+	}
+	.main-container > .sidebar {
+		flex-grow: 1;
+	}
+}
+
+
+@media (min-width: 1025px) {
+	/* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width: 1281px) {
+	/* hi-res laptops and desktops */
+}
