@@ -1,9 +1,17 @@
 <?php
 
+// Set mandatory variable, even though this theme is completely fluid or fixed width agnostic.
+if ( ! isset( $content_width ) ):
+	$content_width = 900;
+endif;
+
 // Theme setup:
 if ( !function_exists( 'notsosimple_setup' ) ) :
 	function notsosimple_setup() {
-		load_theme_textdomain( 'notsosimple' );
+		load_theme_textdomain( 'not-so-simple' );
+		add_theme_support( 'title-tag' );
+		add_theme_support( 'automatic-feed-links' );
+		add_editor_style( 'style-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'notsosimple_setup' );
@@ -13,6 +21,10 @@ add_action( 'after_setup_theme', 'notsosimple_setup' );
 if ( !function_exists('notsosimple_scripts') ) :
 	function notsosimple_scripts() {
 		wp_enqueue_style( 'notsosimple-style', get_stylesheet_uri() );
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'notsosimple_scripts' );
@@ -23,8 +35,8 @@ if ( !function_exists('notsosimple_register_menus' ) ) :
 	function notsosimple_register_menus() {
 		register_nav_menus(
 			array(
-				'header-menu' => __( 'Header Menu' ),
-				'footer-menu' => __( 'Footer Menu' )
+				'header-menu' => __( 'Header Menu', 'not-so-simple' ),
+				'footer-menu' => __( 'Footer Menu', 'not-so-simple' )
 			)
 		);
 	}
@@ -36,8 +48,8 @@ if ( !function_exists( 'notsosimple_sidebars' ) ) :
 		register_sidebar(
 			array(
 				'id'            => 'content-sidebar',
-				'name'          => __( 'Content widget area', 'notsosimple' ),
-				'description'   => __( 'Widgets in this area will be shown in all posts and pages that include the content sidebar.', 'notsosimple' ),
+				'name'          => __( 'Content widget area', 'not-so-simple' ),
+				'description'   => __( 'Widgets in this area will be shown in all posts and pages that include the content sidebar.', 'not-so-simple' ),
 				'before_widget' => '<li id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</li>',
 				'before_title'  => '<h2 class="widgettitle">',

@@ -1,14 +1,14 @@
 /*
 Theme Name: Not so simple
-Theme URI: http://ramonyvane.com
+Theme URI: https://github.com/Ramonacus/notsosimple
 Author: Ramon Ferrer Vicens
 Author URI: http://ramonyvane.com
 Description: Plain and simple WordPress theme.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: simple
-Text Domain: notsosimple
+Tags: translation-ready
+Text Domain: not-so-simple
 
 This theme, like WordPress, is licensed under the GPL.
 */
@@ -60,46 +60,83 @@ table {
 See https://drewish.com/tools/vertical-rhythm/
 Base 16px
 Line height 20px
-Targets 28, 24, 20, 16
+Targets 28, 24, 20, 16, 13
 */
 body {
   font: 16px/1 Helvetica, Arial, sans-serif;
 }
 
-p {
+p { /* 16px */
 	font-size: 1em;
 	line-height: 1.25;
 	margin: 0 0 1.25em 0;
 }
 
-h1,
-.class-for-28px {
+h1 { /* 28px */
 	font-size: 1.75em;
 	line-height: 1.4286;
 	margin-top: 0.7143em;
 	margin-bottom: 0;
 }
 
-h2,
-.class-for-24px {
+h2 { /* 24px */
 	font-size: 1.5em;
 	line-height: 1.6667;
 	margin-top: 0.8333em;
 	margin-bottom: 0;
 }
 
-.class-for-20px {
+h3 { /* 20px */
 	font-size: 1.25em;
 	line-height: 1;
 	margin-top: 1em;
 	margin-bottom: 0;
 }
+small,
+.gallery-caption { /* 13px, WordPress related */
+	font-size: 0.8125em;
+	line-height: 1.5385em;
+}
 
-.class-for-16px {
+/* WordPress related
+-----------------------------------------------------------------------------*/
+.wp-caption {
+	max-width: 100%;
+}
+.wp-caption-text {
 	font-size: 1em;
-	line-height: 1.25;
-	margin-top: 1.25;
-	margin-bottom: 0;
+	margin: 0;
+}
+.sticky {
+	box-sizing: border-box;
+	padding: 1.25em;
+	border: 1px dotted;
+}
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+.bypostauthor {
+	background: pink;
+}
+.alignleft {
+	float: left;
+	display: inline;
+	margin: 0 1.25em 1.25em 0;
+}
+.alignright {
+	float: right;
+	display: inline;
+	margin: 0 0 1.25em 1.25em;
+}
+.aligncenter {
+	display: block;
+	clear: both;
+	margin: 0 auto 1.25em;
 }
 
 /* Layout (mobile first)

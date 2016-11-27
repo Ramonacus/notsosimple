@@ -4,7 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 	<header class="main-header">
 		<h1 class="site-name">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

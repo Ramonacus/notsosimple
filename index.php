@@ -9,13 +9,13 @@
 		endwhile;
 
 		the_posts_pagination( array(
-			'prev_text'          => __( 'Previous page', 'notsosimple' ),
-			'next_text'          => __( 'Next page', 'notsosimple' ),
-			'before_page_number' => __( 'Page', 'notsosimple' ),
+			'prev_text'          => __( 'Previous page', 'not-so-simple' ),
+			'next_text'          => __( 'Next page', 'not-so-simple' ),
+			'before_page_number' => __( 'Page', 'not-so-simple' ),
 		) );
 
 	else :
-		_e( 'Nothing here.', 'notsosimple' );
+		_e( 'Nothing here.', 'not-so-simple' );
 
 	endif;
 	?>

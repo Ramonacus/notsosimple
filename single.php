@@ -14,13 +14,13 @@
 
 		the_post_navigation(
 			array(
-				'next_text' => sprintf( __( 'Next post: %s', 'notsosimple' ), '%title' ),
-				'prev_text' => sprintf( __( 'Previous post: %s', 'notsosimple' ), '%title' )
+				'next_text' => sprintf( __( 'Next post: %s', 'not-so-simple' ), '%title' ),
+				'prev_text' => sprintf( __( 'Previous post: %s', 'not-so-simple' ), '%title' )
 			)
 		);
 
 	else :
-		_e( 'Nothing here.', 'notsosimple' );
+		_e( 'Nothing here.', 'not-so-simple' );
 
 	endif;
 	?>
