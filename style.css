@@ -1,9 +1,9 @@
 /*
 Theme Name: Not so simple
 Theme URI: https://github.com/Ramonacus/notsosimple
-Author: Ramon Ferrer Vicens
+Author: Ramon Ferrer Vicens & Vanessa Badia Gomollon
 Author URI: http://ramonyvane.com
-Description: Plain and simple WordPress theme.
+Description: Not So Simple is a basic starter theme for when you want only the minimum a WordPress site requires. This, for my personal use, includes the typical header and footer menus plus the sidebar widget area.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -68,6 +68,8 @@ Targets 28, 24, 20, 16, 13
 body { /* 16px */
 	font: 16px/1 Helvetica, Arial, sans-serif;
 	line-height: 1.25;
+	/* Fix iOS "feature" of text resizing when changing orientation */
+	-webkit-text-size-adjust: 100%;
 }
 
 p {
