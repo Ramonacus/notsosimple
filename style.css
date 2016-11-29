@@ -213,7 +213,7 @@ sub {
 	font-size: 1em;
 	line-height: 2.5;
 }
-.main-header .sub-menu > .menu-item {
+.main-header .sub-menu .menu-item {
 	margin-left: 1em;
 }
 
@@ -259,6 +259,20 @@ sub {
 		background: white;
 	}
 
+	.main-header .sub-menu .menu-item {
+		margin: 0;
+	}
+
+	.main-header .sub-menu .sub-menu {
+		left: 100%;
+		top: 0;
+	}
+
+	.main-header .menu > .menu-item:last-child .sub-menu .sub-menu {
+		left: auto;
+		right: 100%;
+	}
+
 	.main-header .menu-item:hover {
 		z-index: 10;
 	}
@@ -272,7 +286,7 @@ sub {
 	}
 	.main-container > main {
 		flex-grow: 4;
-		max-width: 85%;
+		max-width: 80%;
 	}
 	.main-container > .sidebar {
 		flex-grow: 1;
