@@ -7,7 +7,7 @@ Description: Plain and simple WordPress theme.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: translation-ready
+Tags: translation-ready, blog
 Text Domain: not-so-simple
 
 This theme, like WordPress, is licensed under the GPL.
@@ -54,6 +54,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+b, strong {
+	font-weight: bold;
+}
 /* Typography
 -----------------------------------------------------------------------------*/
 /*
@@ -62,11 +65,12 @@ Base 16px
 Line height 20px
 Targets 28, 24, 20, 16, 13
 */
-body {
-  font: 16px/1 Helvetica, Arial, sans-serif;
+body { /* 16px */
+	font: 16px/1 Helvetica, Arial, sans-serif;
+	line-height: 1.25;
 }
 
-p { /* 16px */
+p {
 	font-size: 1em;
 	line-height: 1.25;
 	margin: 0 0 1.25em 0;
@@ -98,11 +102,65 @@ small,
 	line-height: 1.5385em;
 }
 
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+	font-family: monospace;
+}
+
+pre {
+	border: 1px dotted #DDD;
+	margin: 0 0 1.25em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.25em;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+code {
+	background-color: #DDD;
+	padding: 0 0.25em;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #DDD;
+	cursor: help;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: super;
+}
+
+sub {
+	vertical-align: sub;
+}
+
 /* WordPress related
 -----------------------------------------------------------------------------*/
-.wp-caption {
+.wp-caption,
+.post-body img,
+.post-body video {
 	max-width: 100%;
 }
+.post-body ul {
+	list-style-type: disc;
+}
+.post-body ol {
+	list-style-type: decimal;
+}
+.post-body li {
+	margin-left: 1.75em;
+}
+
 .wp-caption-text {
 	font-size: 1em;
 	margin: 0;
@@ -145,7 +203,6 @@ small,
 .main-container,
 .main-footer {
 	margin: 1em;
-	border-top: 1px dashed;
 }
 
 /* Navigation
@@ -200,6 +257,10 @@ small,
 		background: white;
 	}
 
+	.main-header .menu-item:hover {
+		z-index: 10;
+	}
+
 	.main-header .menu-item:hover > .sub-menu {
 		display: block;
 	}
@@ -209,6 +270,7 @@ small,
 	}
 	.main-container > main {
 		flex-grow: 4;
+		max-width: 85%;
 	}
 	.main-container > .sidebar {
 		flex-grow: 1;
