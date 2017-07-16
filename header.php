@@ -15,7 +15,8 @@
 		<?php
 		wp_nav_menu(
 			array(
-				'theme_location' => 'header-menu'
+				'theme_location' => 'header-menu',
+				'items_wrap' => '<button class="sandwich-trigger menu-trigger"><span class="sandwich-trigger-inner"><span class="screen-reader-text">' . __( 'Toggle menu', 'notsosimple' ) . '</span></span></button><ul id="%1$s" class="%2$s">%3$s</ul>'
 			)
 		);
 		?>
