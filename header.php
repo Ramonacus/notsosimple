@@ -13,10 +13,17 @@
 			</a>
 		</h1>
 		<?php
+		$sandwich_button_html =
+			'<button class="sandwich-trigger menu-trigger">'
+				. '<span class="sandwich-trigger-inner">'
+					. '<span class="screen-reader-text">' . __( 'Toggle menu', 'notsosimple' ) . '</span>'
+				. '</span>'
+			. '</button>';
+		
 		wp_nav_menu(
 			array(
 				'theme_location' => 'header-menu',
-				'items_wrap' => '<button class="sandwich-trigger menu-trigger"><span class="sandwich-trigger-inner"><span class="screen-reader-text">' . __( 'Toggle menu', 'notsosimple' ) . '</span></span></button><ul id="%1$s" class="%2$s">%3$s</ul>'
+				'items_wrap' => $sandwich_button_html . '<ul id="%1$s" class="%2$s">%3$s</ul>'
 			)
 		);
 		?>
