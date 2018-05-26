@@ -9,7 +9,7 @@
 		endwhile;
 
 	else :
-		_e( 'Nothing here.', 'not-so-simple' );
+		_e( 'Nothing here.', 'notsosimple' );
 
 	endif;
 	?>

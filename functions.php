@@ -8,7 +8,7 @@ endif;
 // Theme setup:
 if ( !function_exists( 'notsosimple_setup' ) ) :
 	function notsosimple_setup() {
-		load_theme_textdomain( 'not-so-simple' );
+		load_theme_textdomain( 'notsosimple' );
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'automatic-feed-links' );
 		add_editor_style( 'style-editor.css' );
@@ -36,8 +36,8 @@ if ( !function_exists('notsosimple_register_menus' ) ) :
 	function notsosimple_register_menus() {
 		register_nav_menus(
 			array(
-				'header-menu' => __( 'Header Menu', 'not-so-simple' ),
-				'footer-menu' => __( 'Footer Menu', 'not-so-simple' )
+				'header-menu' => __( 'Header Menu', 'notsosimple' ),
+				'footer-menu' => __( 'Footer Menu', 'notsosimple' )
 			)
 		);
 	}
@@ -49,8 +49,8 @@ if ( !function_exists( 'notsosimple_sidebars' ) ) :
 		register_sidebar(
 			array(
 				'id'            => 'content-sidebar',
-				'name'          => __( 'Content widget area', 'not-so-simple' ),
-				'description'   => __( 'Widgets in this area will be shown in all posts and pages that include the content sidebar.', 'not-so-simple' ),
+				'name'          => __( 'Content widget area', 'notsosimple' ),
+				'description'   => __( 'Widgets in this area will be shown in all posts and pages that include the content sidebar.', 'notsosimple' ),
 				'before_widget' => '<li id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</li>',
 				'before_title'  => '<h2 class="widgettitle">',

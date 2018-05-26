@@ -8,7 +8,7 @@ endif;
 	if ( have_comments() ) :
 		?>
 		<h2 class="comments-title">
-			<?php _e( 'Comments', 'not-so-simple' ) ?>
+			<?php _e( 'Comments', 'notsosimple' ) ?>
 		</h2>
 
 		<?php the_comments_navigation(); ?>
@@ -31,7 +31,7 @@ endif;
 	<?php
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'not-so-simple' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'notsosimple' ); ?></p>
 		<?php
 	endif;
 	?>
